@@ -1,13 +1,13 @@
-package main
+package jrpcconsole
 
 type Invocation struct {
-	Name           string         `@Ident`
-	Arguments      *[]Value       `"(" ( @Value )* ")"`
-	NamedArguments *NamedArgument `| "(" @@* ")"`
+	Name           string          `@Ident`
+	Arguments      []Value         `"(" ( @@ )* ")"`
+	NamedArguments []NamedArgument `| "(" @@* ")"`
 }
 
 type NamedArgument struct {
-	Name  string `@Ident :`
+	Name  string `@Ident ":"`
 	Value Value  `@@`
 }
 
