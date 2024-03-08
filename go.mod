@@ -2,7 +2,12 @@ module github.com/abiriadev/jrpc-console
 
 go 1.21.6
 
-require github.com/alecthomas/participle/v2 v2.1.1
+require (
+	github.com/alecthomas/participle/v2 v2.1.1
+	github.com/chzyer/readline v1.5.1
+)
+
+require golang.org/x/sys v0.0.0-20220310020820-b874c991c1a5 // indirect
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
