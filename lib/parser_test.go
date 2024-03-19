@@ -1,4 +1,4 @@
-package jrpcconsole
+package lib
 
 import (
 	"testing"
@@ -15,5 +15,4 @@ func TestX(t *testing.T) {
 	} else {
 		assert.Equal(t, "func", ast.Name)
 	}
-
 }

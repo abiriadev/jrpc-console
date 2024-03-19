@@ -1,4 +1,4 @@
-package jrpcconsole
+package lib
 
 type Invocation struct {
 	Name           string          `@Ident`
