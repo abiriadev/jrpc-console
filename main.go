@@ -3,10 +3,14 @@ package main
 import (
 	"fmt"
 
+	"github.com/abiriadev/jrpc-console/lib"
+	"github.com/alecthomas/participle"
 	"github.com/chzyer/readline"
 )
 
 func main() {
+	parser := participle.MustBuild[lib.Invocation]()
+
 	rl, err := readline.New("> ")
 	if err != nil {
 		panic(err)
@@ -19,6 +23,11 @@ func main() {
 			break
 		}
 
-		fmt.Println(line)
+		ast, err := parser.ParseString("", line)
+		if err != nil {
+			panic(err)
+		}
+
+		fmt.Println(ast)
 	}
 }
