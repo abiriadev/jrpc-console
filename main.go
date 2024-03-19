@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/abiriadev/jrpc-console/lib"
-	"github.com/alecthomas/participle"
+	"github.com/alecthomas/participle/v2"
 	"github.com/chzyer/readline"
 )
 
